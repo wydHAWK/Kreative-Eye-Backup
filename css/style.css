@@ -1,0 +1,156 @@
+
+.item-nav{
+    position: relative;
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+.item-nav:after{
+    content: "";
+    position: absolute;
+    background-color: #F35963;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.item-nav:hover:after{
+    width: 100%;
+}
+
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.4);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    z-index: 10;
+}
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.navbar{
+    background: rgba(0, 0, 0, 0.6);
+}
+.carousel-caption a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #1977cc;
+    padding: 5px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.carousel-inner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        text-align: center
+    }
+    .carousel-caption {
+        bottom: 165px
+    }
+    .carousel-caption h5 {
+        font-size: 16px
+    }
+    .carousel-caption a {
+        padding: 10px 15px;
+        font-size: 14px
+    }
+    .navbar .appbtn {
+        display: none;
+    }
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+.welcome{
+    z-index: 999;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(360deg,rgba(0,0,0,0.9),transparent), url(img/1.jpg);
+    background-size: cover;
+}
+.header-text{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 45px;
+}
+.content p{
+    margin:0px;
+    font-size: 30px;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:typing 4s steps(22,end) forwards,
+    blink 1s infinite alternate;
+}
+
+@keyframes typing{
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+@keyframes blink{
+    0%, 100%{
+        border-right: 2px solid transparent;
+    }
+    50%{
+        border-right: 2px solid #fff;
+    }
+}
